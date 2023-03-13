@@ -13,9 +13,9 @@
     <link rel="stylesheet" href="/webjars/bootstrap/5.2.3/css/bootstrap.min.css">
 </head>
 <body>
-<h1 class="text-center">Danh sach sinh vien</h1>
+<h1 class="text-center">List student</h1>
 <br>
-
+<button onclick="location.href = '/view/create.jsp'" class="btn btn-success">Create new student</button>
 <table class="table-bordered table table-hover text-center">
     <thead class="bg-dark text-white">
     <tr>

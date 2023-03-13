@@ -9,7 +9,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet(name = "studentServlet", value = "/studentServlet")
+@WebServlet(name = "studentServlet", value = {"/students",
+	"/students/add"
+})
 public class studentServlet extends HttpServlet {
 	
 	private List<Student> list = new ArrayList<>();
@@ -25,5 +27,12 @@ public class studentServlet extends HttpServlet {
 	
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		Integer id = Integer.parseInt(request.getParameter("id"));
+		String fullName = request.getParameter("fullName");
+		String email = request.getParameter("email");
+		String phoneNumber = request.getParameter("phoneNumber");
+		Integer status = Integer.parseInt(request.getParameter("status"));
+		list.add(new Student(id, fullName, email, phoneNumber, status));
+		response.sendRedirect("/students");
 	}
 }
