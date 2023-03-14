@@ -19,13 +19,15 @@ public class StudentRepository {
 	
 	public List<Student> getAll(){
 		try (Session session = HibernateUtil.getSessionFactory().openSession()) {
-			Query query = session.createQuery("FROM Student ", Student.class);
+			Query query = session.createQuery("from Student ", Student.class);
 			list = query.getResultList();
 		} catch (Exception e) {
 			e.printStackTrace(System.out);
 		}
 			return list;
 	}
+	
+	//Trong db co 1 bang ten la student
 	
 	public static void main(String[] args) {
 		StudentRepository a = new StudentRepository();
