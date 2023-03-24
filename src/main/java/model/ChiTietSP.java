@@ -31,13 +31,11 @@ public class ChiTietSP {
 	private NSX nsx;
 	
 	@ManyToOne
-	
-	@Column(name = "IdMauSac")
+	@JoinColumn(name = "IdMauSac")
 	private MauSac mauSac;
 	
 	@ManyToOne
-	
-	@Column(name = "IdDongSP")
+	@JoinColumn(name = "IdDongSP")
 	private DongSP dongSP;
 	
 	@Column(name = "NamBH")

@@ -21,7 +21,7 @@ public class GioHangChiTiet {
 	@Id
 	@ManyToOne
 	@JoinColumn(name = "IdGioHang")
-	private GioHang IdGioHang;
+	private GioHang gioHang;
 	
 	@Id
 	@ManyToOne

@@ -1,8 +1,8 @@
-package repository;
+package service;
 
 import java.util.List;
 
-public interface IRepository<E> {
+public interface IService<E> {
 	List<E> getAll();
 	List<E> resultListQuery(String hqlQuery);
 	E findByParameter(String parameter, String value);

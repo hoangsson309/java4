@@ -7,7 +7,6 @@ import util.HibernateUtil;
 import javax.persistence.Query;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 public class Repository<E> implements IRepository<E> {
 	

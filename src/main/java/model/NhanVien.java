@@ -53,7 +53,7 @@ public class NhanVien {
 	private CuaHang cuaHang;
 	
 	@ManyToOne
-	@Column(name = "IdCV")
+	@JoinColumn(name = "IdCV")
 	private ChucVu chucVu;
 	
 	@Column(name = "IdGuiBC")
