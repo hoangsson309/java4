@@ -13,6 +13,7 @@ import java.io.Serializable;
 @EqualsAndHashCode
 public class HoaDonChiTietId implements Serializable {
 	public HoaDon hoaDon;
+	
 	public ChiTietSP chiTietSP;
 	
 }

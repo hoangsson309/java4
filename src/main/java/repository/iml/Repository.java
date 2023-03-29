@@ -1,5 +1,6 @@
 package repository.iml;
 
+import model.KhachHang;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import repository.IRepository;
@@ -7,6 +8,7 @@ import util.HibernateUtil;
 import javax.persistence.Query;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 public class Repository<E> implements IRepository<E> {
 	
@@ -40,6 +42,21 @@ public class Repository<E> implements IRepository<E> {
 			exception.printStackTrace();
 		}
 		return null;
+	}
+	
+	@Override
+	public E findById(UUID id) {
+		E e = null;
+		try(Session session = HibernateUtil.getSessionFactory().openSession()) {
+			Query query = session.createQuery("FROM " + className.getSimpleName()
+				+" WHERE id =: id"
+			);
+			query.setParameter("id", id);
+			e = (E)query.getSingleResult();
+		}catch (Exception exception){
+			exception.printStackTrace();
+		}
+		return e;
 	}
 	
 	@Override

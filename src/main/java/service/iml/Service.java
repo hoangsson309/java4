@@ -4,6 +4,7 @@ import repository.iml.Repository;
 import service.IService;
 
 import java.util.List;
+import java.util.UUID;
 
 public class Service<E> implements IService<E> {
 	
@@ -17,6 +18,11 @@ public class Service<E> implements IService<E> {
 	@Override
 	public List<E> getAll() {
 		return repository.getAll();
+	}
+	
+	@Override
+	public E findById(UUID id) {
+		return repository.findById(id);
 	}
 	
 	@Override
