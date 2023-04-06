@@ -13,21 +13,25 @@
     <link rel="stylesheet" href="/webjars/bootstrap/5.2.3/css/bootstrap.min.css">
 </head>
 <body>
+    <br>
+    <br>
     <div class="container">
         <form action="/chuc-vu/add" method="post">
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Mã</label>
                 <div class="col-sm-10">
-                    <input class="form-control" type="text" name="ma"><br>
+                    <input class="form-control" type="text" name="ma" required><br>
                 </div>
             </div>
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Ten</label>
                 <div class="col-sm-10">
-                    <input class="form-control" type="text" name="ma"><br>
+                    <input class="form-control" type="text" name="ten" required><br>
                 </div>
             </div>
-            <button type="submit" class="btn btn-success">Them</button>
+            <div class="fw-bold">
+                <button type="submit" class="btn btn-success pe-3 ps-3">Add</button>
+            </div>
         </form>
     </div>
     <div class="container">
@@ -46,7 +50,7 @@
                         <td>${d.ten}</td>
                         <td>
                             <a href="/chuc-vu/detail?id=${d.id}" class="btn btn-primary">Xem</a>
-                            <a class="btn btn-danger">Xoa</a>
+                            <a href="/chuc-vu/delete?id=${d.id}" class="btn btn-danger">Xoa</a>
                         </td>
                     </tr>
                 </c:forEach>

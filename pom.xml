@@ -88,6 +88,13 @@
             <artifactId>mssql-jdbc</artifactId>
             <version>11.2.1.jre17</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.webjars.bower/angular -->
+        <dependency>
+            <groupId>org.webjars.bower</groupId>
+            <artifactId>angular</artifactId>
+            <version>1.8.0</version>
+        </dependency>
+
     </dependencies>
     <build>
         <plugins>

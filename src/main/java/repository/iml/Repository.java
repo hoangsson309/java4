@@ -20,8 +20,8 @@ public class Repository<E> implements IRepository<E> {
 	
 	@Override
 	public List<E> getAll() {
-		List<E> list = new ArrayList<>();
 		try(Session session = HibernateUtil.getSessionFactory().openSession()) {
+			List<E> list = new ArrayList<>();
 			Query query =  session.createQuery("FROM " +className.getSimpleName());
 			list = query.getResultList();
 			return list;
@@ -33,8 +33,8 @@ public class Repository<E> implements IRepository<E> {
 	
 	@Override
 	public List<E> resultListQuery(String hqlQuery) {
-		List<E> list = new ArrayList<>();
 		try(Session session = HibernateUtil.getSessionFactory().openSession()) {
+			List<E> list = new ArrayList<>();
 			Query _query_ =  session.createQuery(hqlQuery);
 			list = _query_.getResultList();
 			return list;

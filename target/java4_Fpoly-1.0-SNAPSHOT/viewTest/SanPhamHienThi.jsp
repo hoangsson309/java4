@@ -16,7 +16,7 @@
     <br>
     <br>
     <div class="container">
-        <form action="/chuc-vu/add" method="post">
+        <form action="/san-pham/add" method="post">
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Mã</label>
                 <div class="col-sm-10">
@@ -49,8 +49,8 @@
                         <td>${d.ma}</td>
                         <td>${d.ten}</td>
                         <td>
-                            <a href="/chuc-vu/detail?id=${d.id}" class="btn btn-primary">Xem</a>
-                            <a href="/chuc-vu/delete?id=${d.id}" class="btn btn-danger">Xoa</a>
+                            <a href="/san-pham/detail?id=${d.id}" class="btn btn-primary">Xem</a>
+                            <a href="/san-pham/delete?id=${d.id}" class="btn btn-danger">Xoa</a>
                         </td>
                     </tr>
                 </c:forEach>

@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.UUID;
 
@@ -37,7 +38,7 @@ public class NhanVien {
 	private String gioiTinh;
 	
 	@Column(name = "NgaySinh")
-	private Date ngaySinh;
+	private LocalDate ngaySinh;
 	
 	@Column(name = "DiaChi")
 	private String diaChi;

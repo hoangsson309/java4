@@ -5,6 +5,7 @@
   Time: 1:37 PM
   To change this template use File | Settings | File Templates.
 --%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -13,8 +14,8 @@
 </head>
 <body>
     <div class="container">
-        <form action="/chuc-vu/detail?id=${id}" method="get">
-            <div class="form-group row">
+        <form action="/mau-sac/update" method="post">
+            <div hidden class="form-group row">
                 <label class="col-sm-2 col-form-label">ID</label>
                 <div class="col-sm-10">
                     <input class="form-control" type="text" name="id" value="${cv.id}"><br>

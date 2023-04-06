@@ -16,7 +16,7 @@
     <br>
     <br>
     <div class="container">
-        <form action="/chuc-vu/add" method="post">
+        <form action="/cua-hang/add" method="post">
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Mã</label>
                 <div class="col-sm-10">
@@ -27,6 +27,24 @@
                 <label class="col-sm-2 col-form-label">Ten</label>
                 <div class="col-sm-10">
                     <input class="form-control" type="text" name="ten" required><br>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Dia chi</label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="text" name="diaChi" required><br>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Thanh pho</label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="text" name="thanhPho" required><br>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Quoc gia</label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="text" name="quocGia" required><br>
                 </div>
             </div>
             <div class="fw-bold">
@@ -40,6 +58,9 @@
                 <th>ID</th>
                 <th>Ma</th>
                 <th>Ten</th>
+                <th>Dia chi</th>
+                <th>Thanh Pho</th>
+                <th>Quoc Gia</th>
                 <th></th>
             </thead>
             <tbody>
@@ -48,9 +69,12 @@
                         <td>${d.id}</td>
                         <td>${d.ma}</td>
                         <td>${d.ten}</td>
+                        <td>${d.diaChi}</td>
+                        <td>${d.thanhPho}</td>
+                        <td>${d.quocGia}</td>
                         <td>
-                            <a href="/chuc-vu/detail?id=${d.id}" class="btn btn-primary">Xem</a>
-                            <a href="/chuc-vu/delete?id=${d.id}" class="btn btn-danger">Xoa</a>
+                            <a href="/cua-hang/detail?id=${d.id}" class="btn btn-primary">Xem</a>
+                            <a href="/cua-hang/delete?id=${d.id}" class="btn btn-danger">Xoa</a>
                         </td>
                     </tr>
                 </c:forEach>
