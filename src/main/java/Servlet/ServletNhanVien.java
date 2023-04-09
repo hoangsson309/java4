@@ -59,9 +59,9 @@ public class ServletNhanVien extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String uri = request.getRequestURI();
 		if (uri.contains("add")){
-			add(request, response);
+			this.add(request, response);
 		}else if (uri.contains("update")){
-			update(request, response);
+			this.update(request, response);
 		}
 	}
 	
@@ -120,7 +120,6 @@ public class ServletNhanVien extends HttpServlet {
 		cv.setTrangThai(Integer.valueOf(trangThai));
 		cv.setCuaHang(serviceCH.findById(UUID.fromString(idCh)));
 		cv.setChucVu(serviceCV.findById(UUID.fromString(idCv)));
-		service.add(cv);
 		service.update(cv);
 		request.setAttribute("list", list);
 		response.sendRedirect("/nhan-vien/hien-thi");

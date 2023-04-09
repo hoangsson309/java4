@@ -16,7 +16,7 @@ import java.util.UUID;
 @AllArgsConstructor
 @ToString
 @IdClass(HoaDonChiTietId.class)
-@Table(name = "oaDonChiTiet")
+@Table(name = "HoaDonChiTiet")
 public class HoaDonChiTiet {
 	@Id
 	@ManyToOne

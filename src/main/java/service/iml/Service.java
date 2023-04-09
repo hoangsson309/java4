@@ -1,15 +1,15 @@
 package service.iml;
 
+import lombok.Data;
 import repository.iml.Repository;
 import service.IService;
 
 import java.util.List;
 import java.util.UUID;
-
 public class Service<E> implements IService<E> {
 	
 	private Class<E> className;
-	private Repository<E> repository = null;
+	private Repository<E> repository;
 	public Service(Class<E> className) {
 		this.className = className;
 		repository = new Repository<>(className);

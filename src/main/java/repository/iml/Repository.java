@@ -9,7 +9,6 @@ import javax.persistence.Query;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
-
 public class Repository<E> implements IRepository<E> {
 	
 	private Class<E> className;
@@ -78,7 +77,7 @@ public class Repository<E> implements IRepository<E> {
 		Transaction transaction = null;
 		try(Session session = HibernateUtil.getSessionFactory().openSession()) {
 			transaction = session.beginTransaction();
-			session.persist(e);
+			session.save(e);
 			transaction.commit();
 			return true;
 		}catch (Exception exception){
